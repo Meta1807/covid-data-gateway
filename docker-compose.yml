@@ -1,0 +1,36 @@
+version: '2.3'
+services:
+  covid_data_gateway:
+    container_name: covid_data_gateway
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./
+        target: /app/gateway
+    ports:
+      - "4000:4000"
+    restart: always
+
+  covid_data_kawalcovid:
+    container_name: covid_data_kawalcovid
+    build:
+      context: ./kawalcovid-gql
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./kawalcovid-gql
+        target: /app/
+    restart: always
+
+  covid_data_kemenkes:
+    container_name: covid_data_kemenkes
+    build:
+      context: ./kemenkes-covid-gql
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./kemenkes-covid-gql/
+        target: /app/
+    restart: always

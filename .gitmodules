@@ -1,0 +1,6 @@
+[submodule "kawalcovid-gql"]
+	path = kawalcovid-gql
+	url = https://github.com/Meta1807/kawalcovid-gql
+[submodule "kemenkes-covid-gql"]
+	path = kemenkes-covid-gql
+	url = https://github.com/Meta1807/kemenkes-covid-gql
