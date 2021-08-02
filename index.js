@@ -1,6 +1,6 @@
 import { stitchSchemas } from '@graphql-tools/stitch';
-import { kawalCovidSubschema } from './remoteSchemas/kawalCovid';
-import { kemenkesSubschema } from './remoteSchemas/kemenkes';
+import { kawalCovidSubschema } from './schemas/kawalCovid';
+import { kemenkesSubschema } from './schemas/kemenkes';
 import { ApolloServer } from 'apollo-server';
 
 
